@@ -26,14 +26,13 @@ public class ChatClient {
             // Start thread to receive messages
             Thread receiveThread = new Thread(new ReceiveHandler());
             receiveThread.start();
-
-            // Read username prompt and send username
+            
             String prompt = in.readLine();
             System.out.println(prompt);
             String username = scanner.nextLine();
             out.println(username);
 
-            // Main thread sends messages
+            // Main thread
             String message;
             while (true) {
                 message = scanner.nextLine();
